@@ -56,21 +56,21 @@ cv2.imwrite("AdaptiveThresholding/algae4_at.jpeg", th4)
 #Adaptive Gaussian Thresholding------------------------------
 agt1 = cv2.adaptiveThreshold(algae1_gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv2.THRESH_BINARY,11,2)
-cv2.imwrite("AdaptiveGausThres/algae1_at.png", agt1)
+cv2.imwrite("AdaptiveGausThres/algae1_agt.png", agt1)
 
 agt2 = cv2.adaptiveThreshold(algae2_gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv2.THRESH_BINARY,11,2)
-cv2.imwrite("AdaptiveGausThres/algae2_at.png", agt2)
+cv2.imwrite("AdaptiveGausThres/algae2_agt.png", agt2)
 
 agt3 = cv2.adaptiveThreshold(algae3_gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv2.THRESH_BINARY,11,2)
-cv2.imwrite("AdaptiveGausThres/algae3_at.png", agt3)
+cv2.imwrite("AdaptiveGausThres/algae3_agt.png", agt3)
 
 agt4 = cv2.adaptiveThreshold(algae4_gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\
             cv2.THRESH_BINARY,11,2)
-cv2.imwrite("AdaptiveGausThres/algae4_at.png", agt4)
+cv2.imwrite("AdaptiveGausThres/algae4_agt.png", agt4)
 
-#erosion----------------------------------
+#erosion--------------------------------------------
 kernel = np.ones((5,5),np.uint8)
 e1 = cv2.erode(thresh1,kernel,iterations = 1)
 cv2.imwrite("Erosion/algae1_erosion.png", e1)
@@ -84,7 +84,7 @@ cv2.imwrite("Erosion/algae3_erosion.png", e3)
 e4 = cv2.erode(thresh4,kernel,iterations = 1)
 cv2.imwrite("Erosion/algae4_erosion.png", e4)
 
-#Dilation-------------------------------------
+#Dilation-------------------------------------------------
 d1 = cv2.dilate(thresh1,kernel,iterations = 1)
 cv2.imwrite("Dilation/algae1_dilation.png", d1)
 
