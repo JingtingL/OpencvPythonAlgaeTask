@@ -2,10 +2,12 @@ import cv2
 import numpy as np
 print("Package Imported")
 
-algae1 = cv2.imread("AlgaePics/algae1.png")
-algae2 = cv2.imread("AlgaePics/algae2.jpeg")
-algae3 = cv2.imread("AlgaePics/algae3.jpeg")
-algae4 = cv2.imread("AlgaePics/algae4.jpeg")
+algae1 = cv2.imread("AlgaePics/algae1.jpg")
+algae2 = cv2.imread("AlgaePics/algae2.jpg")
+algae3 = cv2.imread("AlgaePics/algae3.jpg")
+algae4 = cv2.imread("AlgaePics/algae4.jpg")
+
+print(algae1)
 
 #gray scale------------------------------------
 algae1_gray = cv2.cvtColor(algae1, cv2.COLOR_BGR2GRAY)
